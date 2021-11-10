@@ -11,12 +11,17 @@ namespace Triangle_Vorm
         public double a;//первая сторона
         public double b;//вторая сторона
         public double c;//третья сторона
-    
+        public double h;//высота
         public Triangle(double A,double B,double C)//Конструктор
         {
             a = A;
             b = B;
             c = C;
+
+        }
+        public Triangle(double H)
+        {
+            h = H;
         }
         public string outputA() //выводим сторону а,данный метод возвращает строковое значение
         {
@@ -26,17 +31,17 @@ namespace Triangle_Vorm
         {
             return Convert.ToString(b);
         }
-        public string outputC()
+        public string outputC()//выводим сторону С
         {
             return Convert.ToString(c);
         }
-        public double Perimetr()
+        public double Perimetr()//сумма всех сторон типа double
         {
             double p = 0;
-            p = a + b + c;
-            return p;
+            p = a + b + c;//вычисление
+            return p;//возварт
         }
-        public double Surface()
+        public double Surface()//аналогично периметру
         {
             double s = 0;
             double p = 0;
@@ -44,21 +49,21 @@ namespace Triangle_Vorm
             s = Math.Sqrt((p * (p - a) * (p - b) * (p - c)));
             return s;
         }
-        public double GetSetA//свойство позволяющее установить либо изменить значение стороны
+        public double GetSetA//свойство позволяющее установить либо изменить значение стороны А
         {
-            get
+            get//устанавливаем
             { return a; }
-            set
+            set//меняем
             { a = value; }
         }
-        public double GetSetB//свойство позволяющее установить либо изменить значение стороны
+        public double GetSetB//свойство позволяющее установить либо изменить значение стороны В
         {
             get
             { return b; }
             set
             { b = value; }
         }
-        public double GetSetC//свойство позволяющее установить либо изменить значение стороны
+        public double GetSetC//свойство позволяющее установить либо изменить значение стороны С
         {
             get
             { return c; }
@@ -69,11 +74,15 @@ namespace Triangle_Vorm
         {
             get
             {
-                if ((a > b + c) && (b > a + c) && (c > a + b))
+                if ((a > b + c) && (b > a + c) && (c > a + b)) // сумма двух сторон должна быть третьей
                     return false;
                     else return true;
             }
      
+        }
+        public double TriangleH()
+        {
+            return (Surface()*2/a); //нахождение вершины H
         }
     }
 }   
