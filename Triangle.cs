@@ -82,7 +82,7 @@ namespace Triangle_Vorm
         }
         public double TriangleH()
         {
-            return (Surface()*2/a); //нахождение вершины H
+            return (Surface()*2/a); //нахождение вершины H(Ответ от нахождения площади(surface)вставляется для нахождения вершины)
         }
     }
 }   
