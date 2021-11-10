@@ -70,13 +70,14 @@ namespace Triangle_Vorm
             set
             { c = value; }
         }
-        public bool ExistTriange//позволяет установить, существует ли треугольник с такими сторонами
+        public bool ExistTriangle//позволяет установить, существует ли треугольник с такими сторонами
         {
             get
             {
-                if ((a > b + c) && (b > a + c) && (c > a + b)) // сумма двух сторон должна быть третьей
-                    return false;
-                    else return true;
+                if ((a > b + c) && (b > a + c) && (c > a + b)) { // сумма двух сторон должна быть третьей
+                    return true; }
+                  else return false;
+
             }
      
         }
@@ -84,5 +85,7 @@ namespace Triangle_Vorm
         {
             return (Surface()*2/a); //нахождение вершины H(Ответ от нахождения площади(surface)вставляется для нахождения вершины)
         }
+       
+
     }
 }   

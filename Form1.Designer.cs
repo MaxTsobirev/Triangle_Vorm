@@ -29,54 +29,115 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.Запуск = new System.Windows.Forms.Button();
+            this.Run_button = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.зн = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtA = new System.Windows.Forms.TextBox();
+            this.txtB = new System.Windows.Forms.TextBox();
+            this.txtC = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // Запуск
+            // Run_button
             // 
-            this.Запуск.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Запуск.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Запуск.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.Запуск.FlatAppearance.BorderSize = 10;
-            this.Запуск.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Запуск.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.Запуск.Location = new System.Drawing.Point(553, 63);
-            this.Запуск.Name = "Запуск";
-            this.Запуск.Size = new System.Drawing.Size(154, 119);
-            this.Запуск.TabIndex = 0;
-            this.Запуск.Text = "Запуск";
-            this.Запуск.UseVisualStyleBackColor = false;
+            this.Run_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.Run_button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Run_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.Run_button.FlatAppearance.BorderSize = 10;
+            this.Run_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Run_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Run_button.Location = new System.Drawing.Point(582, 42);
+            this.Run_button.Name = "Run_button";
+            this.Run_button.Size = new System.Drawing.Size(154, 119);
+            this.Run_button.TabIndex = 0;
+            this.Run_button.Text = "Запуск";
+            this.Run_button.UseVisualStyleBackColor = false;
+            this.Run_button.Click += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.зн});
+            this.listView1.Location = new System.Drawing.Point(23, 21);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(231, 158);
+            this.listView1.TabIndex = 2;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Поле";
+            // 
+            // зн
+            // 
+            this.зн.Text = "Значение";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-2, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(543, 168);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(411, 362);
-            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.Size = new System.Drawing.Size(229, 181);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            // 
+            // txtA
+            // 
+            this.txtA.Location = new System.Drawing.Point(23, 199);
+            this.txtA.Name = "txtA";
+            this.txtA.Size = new System.Drawing.Size(100, 20);
+            this.txtA.TabIndex = 4;
+            // 
+            // txtB
+            // 
+            this.txtB.Location = new System.Drawing.Point(23, 227);
+            this.txtB.Name = "txtB";
+            this.txtB.Size = new System.Drawing.Size(100, 20);
+            this.txtB.TabIndex = 5;
+            // 
+            // txtC
+            // 
+            this.txtC.Location = new System.Drawing.Point(23, 253);
+            this.txtC.Name = "txtC";
+            this.txtC.Size = new System.Drawing.Size(100, 20);
+            this.txtC.TabIndex = 6;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 361);
+            this.Controls.Add(this.txtC);
+            this.Controls.Add(this.txtB);
+            this.Controls.Add(this.txtA);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.Запуск);
+            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.Run_button);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Работа с треугольником";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button Запуск;
+        private System.Windows.Forms.Button Run_button;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader зн;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtA;
+        private System.Windows.Forms.TextBox txtB;
+        private System.Windows.Forms.TextBox txtC;
     }
 }
 
