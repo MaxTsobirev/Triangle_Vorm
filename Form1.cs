@@ -37,11 +37,21 @@ namespace Triangle_Vorm
             listView1.Items[2].SubItems.Add(triangle.outputC());
             listView1.Items[3].SubItems.Add(Convert.ToString(triangle.Perimetr()));//выводим периметр
             listView1.Items[4].SubItems.Add(Convert.ToString(triangle.Surface()));//выводим значение площади
-            listView1.Items[5].SubItems.Add(Convert.ToString(triangle.TriangleH()));
             if (triangle.ExistTriangle) { listView1.Items[5].SubItems.Add("Существует"); }
             else listView1.Items[5].SubItems.Add("Не существует");
 
 
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            Form2 frm = new Form2();
+            frm.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }

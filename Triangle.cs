@@ -11,12 +11,20 @@ namespace Triangle_Vorm
         public double a;//первая сторона
         public double b;//вторая сторона
         public double c;//третья сторона
+        public double h;
         
         public Triangle(double A,double B,double C)//Конструктор
         {
             a = A;
             b = B;
             c = C;
+
+        }
+        public Triangle(double A,double H)//Конструктор
+        {
+            a = A;
+            h = H;
+            
 
         }
         public string outputA() //выводим сторону а,данный метод возвращает строковое значение
@@ -77,8 +85,15 @@ namespace Triangle_Vorm
             }
      
         }
-        
-       
+        public double plosjad()
+        {
+            double s = 0;
+
+            s = a * h / 2;
+            return s;
+        }
+
+
 
     }
 }   
