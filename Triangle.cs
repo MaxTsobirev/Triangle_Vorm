@@ -11,17 +11,13 @@ namespace Triangle_Vorm
         public double a;//первая сторона
         public double b;//вторая сторона
         public double c;//третья сторона
-        public double h;//высота
+        
         public Triangle(double A,double B,double C)//Конструктор
         {
             a = A;
             b = B;
             c = C;
 
-        }
-        public Triangle(double H)
-        {
-            h = H;
         }
         public string outputA() //выводим сторону а,данный метод возвращает строковое значение
         {
@@ -81,10 +77,7 @@ namespace Triangle_Vorm
             }
      
         }
-        public double TriangleH()
-        {
-            return (Surface()*2/a); //нахождение вершины H(Ответ от нахождения площади(surface)вставляется для нахождения вершины)
-        }
+        
        
 
     }
